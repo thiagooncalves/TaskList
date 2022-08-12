@@ -1,13 +1,27 @@
-import { styled } from '@stitches/react';
+import * as S from 'styled'
 
-export const Sidebar = styled("sidebar", {
-  display: 'flex',
-  flexDirection: 'column',
-  textAlign: 'center',
-  marginTop: 10,
-  padding: 15,
-  gap: 10,
-  width: 250,
-  height: 200,
-  border: 'solid .5rem #021844',
-})
+export const Sidebar = () => {
+  return (
+    <S.Sidebar>
+        <a href="//www.google.com">
+          <button>Home</button>
+        </a>
+        <b />
+        <a href="//www.google.com">
+          <button>Ofertas e Destinos</button>
+        </a>
+        <b />
+        <a href="//www.google.com">
+          <button>Minhas viagens</button>
+        </a>
+        <b />
+        <a href="//www.google.com">
+          <button>Fale conosco</button>
+        </a>
+        <b />
+        <a href="//www.google.com">
+          <button>Fazer login</button>
+        </a>
+      </S.Sidebar>
+  )
+}

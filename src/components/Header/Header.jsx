@@ -1,8 +1,14 @@
-import { styled } from '@stitches/react';
+import * as S from 'styled'
 
-export const Header = styled("header", {
-  display: 'flex',
-  justifyContent: 'center',
-  border: 'solid .5rem #021844',
-  padding: 10
-})
+export const Header = () => {
+  return (
+  <S.Header>
+          <div>
+            <a href="//www.google.com">
+              <img src="../src/assets/logoaviao-header.png" alt="Avião logo" />
+            </a>
+          </div>
+  </S.Header>
+  )
+}
+
