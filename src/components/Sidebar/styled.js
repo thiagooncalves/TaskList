@@ -11,6 +11,7 @@ export const Sidebar = styled("sidebar", {
   height: 200,
   border: "solid .5rem black",
   '& button': {
+    fontFamily: 'Exo',
     backgroundColor: "transparent",
     border: "none",
     cursor: "pointer",

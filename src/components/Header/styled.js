@@ -1,6 +1,7 @@
 import { styled } from "../../stitches.config.js";
 
 export const Header = styled("header", {
+  fontFamily: 'Exo',
   display: "flex",
   justifyContent: "center",
   border: "solid .5rem black",
@@ -13,4 +14,3 @@ export const Header = styled("header", {
     gap: 50
   }
 });
-
