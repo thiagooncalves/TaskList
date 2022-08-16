@@ -10,6 +10,8 @@ export const Sidebar = styled("sidebar", {
   width: 250,
   height: 210,
   border: "solid .4rem black",
+  borderRadius: 20,
+  boxShadow: 'inset 0 0 .5rem black',
   '& button': {
     fontFamily: 'Exo',
     backgroundColor: "transparent",
@@ -19,9 +21,10 @@ export const Sidebar = styled("sidebar", {
     fontWeight: "bold",
     color: "black",
     "&:hover": {
-      textDecoration: "underline",
       transform: "scale(1.1)",
-      transition: "400ms",
+      transition: "200ms",
+      boxShadow: '3px 3px 3px black',
+      padding: 2,
     },
   }
 });
