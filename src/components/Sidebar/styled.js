@@ -8,8 +8,8 @@ export const Sidebar = styled("sidebar", {
   padding: 15,
   gap: 10,
   width: 250,
-  height: 200,
-  border: "solid .5rem black",
+  height: 210,
+  border: "solid .4rem black",
   '& button': {
     fontFamily: 'Exo',
     backgroundColor: "transparent",
@@ -20,7 +20,7 @@ export const Sidebar = styled("sidebar", {
     color: "black",
     "&:hover": {
       textDecoration: "underline",
-      transform: "scale(1.2)",
+      transform: "scale(1.1)",
       transition: "400ms",
     },
   }

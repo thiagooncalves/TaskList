@@ -4,7 +4,7 @@ export const Header = styled("header", {
   fontFamily: 'Exo',
   display: "flex",
   justifyContent: "center",
-  border: "solid .5rem black",
+  border: "solid .4rem black",
   padding: 10,
   '& div': {
     display: 'flex',
