@@ -4,13 +4,11 @@ export const Header = () => {
   return (
   <S.Header>
           <div>
-            <div>TASK</div>
+            <div>DEV</div>
             <a href="//www.google.com">
               <img src="../src/assets/logoaviao-header.png" alt="Avião logo" />
             </a>
-            <div>LIST</div>
-            
-
+            <div>AIR</div>
           </div>
   </S.Header>
   )
