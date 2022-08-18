@@ -1,4 +1,4 @@
-import { styled } from "@stitches/react";
+import { styled } from "./stitches.config.js";
 import { Header } from "./components/Header/Header";
 import { Sidebar } from "./components/Sidebar/Sidebar";
 import { Table } from "./components/Tabela/Table";
