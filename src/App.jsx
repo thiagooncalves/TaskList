@@ -1,6 +1,11 @@
+import { styled } from "@stitches/react";
 import { Header } from "./components/Header/Header";
 import { Sidebar } from "./components/Sidebar/Sidebar";
 import { Table } from "./components/Tabela/Table";
+
+const Div = styled("div", {
+  display: 'flex',
+})
 
 function App() {
   return (
@@ -10,9 +15,11 @@ function App() {
         <Header />
       </div>
         
-      <div style={{display: "flex"}}>
-        <Sidebar />
-        <Table />
+      <div>
+        <Div>
+          <Sidebar />
+          <Table />
+        </Div>
       </div>
         
     </div>
