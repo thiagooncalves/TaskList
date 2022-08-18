@@ -1,11 +1,10 @@
 import { styled } from "../../stitches.config.js";
 
-export const Tabela = styled("tabela", {
-    display: 'flex',
-    width: '76vw',
+export const Table = styled("table", {
+    width: '50vw',
     marginTop: 9,
-    float: 'right',
-    justifyContent: 'flex-start',
+    marginLeft: 10,
+    height: 40,
     '& th': {
         fontFamily: 'Exo',
         border: 'solid .2rem black',

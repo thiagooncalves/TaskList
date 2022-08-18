@@ -1,6 +1,6 @@
 import { styled } from "../../stitches.config.js";
 
-export const Sidebar = styled("sidebar", {
+export const Sidebar = styled("div", {
   display: "flex",
   flexDirection: "column",
   textAlign: "center",
@@ -26,5 +26,5 @@ export const Sidebar = styled("sidebar", {
       boxShadow: '3px 3px 3px black',
       padding: 2,
     },
-  }
+  },
 });
