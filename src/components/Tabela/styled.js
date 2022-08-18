@@ -11,8 +11,9 @@ export const Tabela = styled("tabela", {
         border: 'solid .2rem black',
         padding: 5,
         width: 220,
-        backgroundColor: '#555555',
-        color: 'White',
-        fontWeight: 'normal',
+        backgroundColor: 'White',
+        color: 'Black',
+        fontWeight: 'bold',
+        boxShadow: 'inset 0 0 .3rem black',
     },
 });
