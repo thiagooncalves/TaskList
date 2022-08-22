@@ -1,4 +1,4 @@
-import * as S from './styled.js'
+import * as S from './header.style.js';
 
 export const Header = () => {
   return (

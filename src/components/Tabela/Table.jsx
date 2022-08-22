@@ -1,4 +1,4 @@
-import * as S from './styled.js'
+import * as S from './table.style.js';
 
 export const Table = () => {
     return (

@@ -16,7 +16,3 @@ export const Table = styled("table", {
         boxShadow: 'inset 0 0 .3rem black',
     },
 });
-
-export const Div = styled("div", {
-    display: 'flex',
-})

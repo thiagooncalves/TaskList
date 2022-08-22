@@ -1,4 +1,4 @@
-import * as S from './styled.js'
+import * as S from './sidebar.style.js';
 
 export const Sidebar = () => {
   return (
