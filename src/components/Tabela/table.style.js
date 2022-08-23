@@ -1,9 +1,9 @@
 import { styled } from "../../stitches.config.js";
 
 export const Table = styled("table", {
-    width: '50vw',
+    width: '50.5vw',
     marginTop: 9,
-    marginLeft: 10,
+    marginLeft: 98,
     height: 40,
     '& th': {
         fontFamily: 'Exo',
