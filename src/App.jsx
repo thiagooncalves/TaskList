@@ -7,6 +7,8 @@ import { Formulario } from "./components/Form/Formulario";
 const Div = styled("div", {
   display: 'flex',
   flexDirection: 'column',
+  marginLeft: 100,
+  fontFamily: 'Exo',
 });
 
 function App() {
