@@ -9,7 +9,7 @@ export const schema = Yup.object().shape({
   filtro: Yup.string(),
 });
 
-export const Formulario = () => {
+export const Formulario = (props) => {
   const formik = useFormik({
     initialValues: {
       titulo: "",
@@ -17,8 +17,8 @@ export const Formulario = () => {
       filtro: "",
     },
     validationSchema: Yup.object({
-      titulo: Yup.string().required("ERROR"),
-      descricao: Yup.string().required("ERROR"),
+      titulo: Yup.string().required(""),
+      descricao: Yup.string().required(""),
       filtro: Yup.string(),
       // faltam as condições de filtragem
     }),
@@ -29,33 +29,33 @@ export const Formulario = () => {
   return (
     <div>
       <form onSubmit={formik.handleSubmit}>
-        <label htmlFor="criarTarefa">
-          Criar tarefa
-        </label>
-        <Input id="titulo" type={"text"} name={"titulo"} placeholder="Título" />
+        <label htmlFor="criarTarefa">{props.label}</label>
+        <Input
+          type={"text"}
+          name={"titulo"}
+          placeholder={"Título"}
+        />
         {formik.touched.titulo && formik.errors.titulo ? (
           <div>{formik.errors.titulo}</div>
         ) : null}
 
         <Input
-          id="descricao"
           type={"text"}
           name={"descricao"}
-          placeholder="Descrição"
+          placeholder={"Descrição"}
         />
         {formik.touched.descricao && formik.errors.descricao ? (
           <div>{formik.errors.descricao}</div>
         ) : null}
 
-        <Button>Adicionar</Button>
+        <Button>{props.button}</Button>
 
-        <h4>Minhas tarefas</h4>
-        <label htmlFor="filtro">Filtre:</label>
+        <h4>{props.h4}</h4>
+        <label htmlFor="filtro">{props.label1}</label>
         <Input
-          id="filtro"
           type={"text"}
           name={"filtro"}
-          placeholder="Digite o nome da tarefa"
+          placeholder={"Digite o nome da tarefa"}
         />
         {formik.touched.filtro && formik.errors.filtro ? (
           <div>{formik.errors.filtro}</div>
