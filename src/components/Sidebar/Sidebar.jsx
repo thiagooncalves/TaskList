@@ -1,26 +1,26 @@
 import * as S from './sidebar.style.js';
 
-export const Sidebar = (props) => {
+export const Sidebar = ({ button1, button2, button3, button4, button5 }) => {
   return (
     <S.Sidebar>
         <a href="//www.google.com">
-          <button>{props.button}</button>
+          <button>{button1}</button>
         </a>
         <b />
         <a href="//www.google.com">
-          <button>{props.button1}</button>
+          <button>{button2}</button>
         </a>
         <b />
         <a href="//www.google.com">
-          <button>{props.button2}</button>
+          <button>{button3}</button>
         </a>
         <b />
         <a href="//www.google.com">
-          <button>{props.button3}</button>
+          <button>{button4}</button>
         </a>
         <b />
         <a href="//www.google.com">
-          <button>{props.button4}</button>
+          <button>{button5}</button>
         </a>
       </S.Sidebar>
   )

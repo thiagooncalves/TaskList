@@ -1,7 +1,7 @@
 import * as S from './input.style.js';
 
-export const Input = () => {
+export const Input = ({ label }) => {
     return (
-        <S.Input></S.Input>
+        <S.Input name={''} id={''} value={''}>{label}</S.Input>
     )
 };

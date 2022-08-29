@@ -1,14 +1,14 @@
 import * as S from './header.style.js';
 
-export const Header = (props) => {
+export const Header = ({ title1, title2 }) => {
   return (
   <S.Header>
           <div>
-            <div>{props.div}</div>
+            <div>{title1}</div>
             <a href="//www.google.com">
               <img src="../src/assets/logoaviao-header.png" alt="Avião logo" />
             </a>
-            <div>{props.div1}</div>
+            <div>{title2}</div>
           </div>
   </S.Header>
   )

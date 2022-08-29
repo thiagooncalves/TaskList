@@ -1,5 +1,5 @@
-import { Button } from "../Button/button.style.js";
-import { Input } from "../Input/input.style.js";
+import { Button } from "../Button/Button";
+import { Input } from "../Input/Input";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 
@@ -9,12 +9,12 @@ export const schema = Yup.object().shape({
   filtro: Yup.string(),
 });
 
-export const Formulario = (props) => {
+export const Formulario = ({ label, h4 }) => {
   const formik = useFormik({
     initialValues: {
-      titulo: "",
-      descricao: "",
-      filtro: "",
+      titulo: '',
+      descricao: '',
+      filtro: '',
     },
     validationSchema: Yup.object({
       titulo: Yup.string().required(""),
@@ -22,18 +22,21 @@ export const Formulario = (props) => {
       filtro: Yup.string(),
       // faltam as condições de filtragem
     }),
-    onSubmit: (values) => {
+    onSubmit: values => {
       alert(JSON.stringify(values, null, 2));
     },
   });
   return (
     <div>
       <form onSubmit={formik.handleSubmit}>
-        <label htmlFor="criarTarefa">{props.label}</label>
+        <label htmlFor="titulo">{label}</label>
         <Input
           type={"text"}
           name={"titulo"}
           placeholder={"Título"}
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          value={formik.values.titulo}
         />
         {formik.touched.titulo && formik.errors.titulo ? (
           <div>{formik.errors.titulo}</div>
@@ -43,19 +46,25 @@ export const Formulario = (props) => {
           type={"text"}
           name={"descricao"}
           placeholder={"Descrição"}
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          value={formik.values.descricao}
         />
         {formik.touched.descricao && formik.errors.descricao ? (
           <div>{formik.errors.descricao}</div>
         ) : null}
 
-        <Button>{props.button}</Button>
+        <Button label={"Adicionar"} />
 
-        <h4>{props.h4}</h4>
-        <label htmlFor="filtro">{props.label1}</label>
+        <h4>{h4}</h4>
+        <label htmlFor="filtro">{label}</label>
         <Input
           type={"text"}
           name={"filtro"}
           placeholder={"Digite o nome da tarefa"}
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          value={formik.values.filtro}
         />
         {formik.touched.filtro && formik.errors.filtro ? (
           <div>{formik.errors.filtro}</div>

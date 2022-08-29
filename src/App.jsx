@@ -16,21 +16,54 @@ const Div = styled("div", {
 });
 
 function App() {
+  const tableData = {
+    head: [
+      { label: "Tarefa" },
+      { label: "Descrição" },
+      { label: "Configurações" },
+    ],
+    body: [{}]
+  };
+
+  const addTask = () => {
+    return <></>
+  };
+
+  const filterTask = () => {
+    return <></>
+  };
+
   return (
     <div>
-
       <div>
-        <Header div="DEV" div1="AIR" />
+        <Header
+        title1="DEV"
+        title2="AIR" 
+        />
       </div>
 
       <Divmain>
-        <Sidebar button="Home" button1="Ofertas e Destinos" button2="Minhas viagens" button3="Fale conosco" button4="Login" />
+        <Sidebar
+          button1="Ofertas e Destinos"
+          button2="Home"
+          button3="Minhas viagens"
+          button4="Fale conosco"
+          button5="Login"
+        />
         <Div>
-          <Formulario label="Criar Tarefa" button="Adicionar" h4="Minhas tarefas" label1="Filtre:" />
-          <Table th="Tarefa" th1="Descrição" th2="Configurações" />
+        <Formulario
+            label="Criar Tarefa"
+            button="Adicionar"
+            submit={addTask}
+          />
+          <Formulario
+            label="Filtre"
+            h4="Minhas tarefas"
+            submit={filterTask}
+          />
+          <Table head={tableData.head} body={tableData.body} />
         </Div>
       </Divmain>
-
     </div>
   );
 }

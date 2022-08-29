@@ -1,15 +1,25 @@
-import * as S from './table.style.js';
+import * as S from "./table.style.js";
 
-export const Table = (props) => {
-    return (
-        <S.Table>
-                <thead>
-                    <tr>
-                        <th>{props.th}</th>
-                        <th>{props.th1}</th>
-                        <th>{props.th2}</th>
-                    </tr>
-                </thead>    
-        </S.Table>
-    )
+export const Table = ({ head, body }) => {
+  return (
+    <S.Table>
+      <thead>
+        <tr>
+          {head.map((item) => {
+            return <th>{item}</th>;
+          })}
+        </tr>
+      </thead>
+      
+      <tbody>
+        {body.map((item) => {
+          return (
+            <tr>
+              
+            </tr>
+          );
+        })}
+      </tbody>
+    </S.Table>
+  );
 };
