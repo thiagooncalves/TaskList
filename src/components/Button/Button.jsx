@@ -1,7 +1,7 @@
 import * as S from './button.style.js';
 
-export const Button = ({ label }) => {
+export const Button = ({ buttonAdd }) => {
     return (
-        <S.Button>{label}</S.Button>
+        <S.Button>{buttonAdd}</S.Button>
     )
 };

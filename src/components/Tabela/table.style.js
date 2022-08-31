@@ -5,11 +5,12 @@ export const Table = styled("table", {
     marginTop: 9,
     marginLeft: 0,
     height: 40,
-    '& th': {
+    '& td': {
         fontFamily: 'Exo',
         border: 'solid .2rem black',
         padding: 5,
         width: 220,
+        height: 25,
         backgroundColor: 'White',
         color: 'Black',
         fontWeight: 'bold',

@@ -1,64 +1,45 @@
 import { Header } from "./components/Header/Header";
 import { Sidebar } from "./components/Sidebar/Sidebar";
 import { Table } from "./components/Tabela/Table";
-import { styled } from "./stitches.config"; // referente as <Div> e <Divmain>.
-import { Formulario } from "./components/Form/Formulario";
-
-const Divmain = styled("div", {
-  display: "flex",
-});
-
-const Div = styled("div", {
-  display: "flex",
-  flexDirection: "column",
-  marginLeft: 100,
-  fontFamily: "Exo",
-});
+import { FormularioCadastro } from "./components/Form/FormularioCadastro";
+import { FormularioFiltro } from "./components/Form/FormularioFiltro";
+import { Div, Divmain } from "../src/App.style";
 
 function App() {
   const tableData = {
     head: [
-      { label: "Tarefa" },
-      { label: "Descrição" },
-      { label: "Configurações" },
+      { titleHead: "Tarefa" },
+      { titleHead: "Descrição" },
+      { titleHead: "Configurações" },
     ],
-    body: [{}]
+    body: [{}],
   };
 
   const addTask = () => {
-    return <></>
+    return <></>;
   };
 
   const filterTask = () => {
-    return <></>
+    return <></>;
   };
 
   return (
     <div>
       <div>
-        <Header
-        title1="DEV"
-        title2="AIR" 
-        />
+        <Header title="DEV" subtitle="AIR" />
       </div>
 
       <Divmain>
-        <Sidebar
-          button1="Ofertas e Destinos"
-          button2="Home"
-          button3="Minhas viagens"
-          button4="Fale conosco"
-          button5="Login"
-        />
+        <Sidebar />
         <Div>
-        <Formulario
-            label="Criar Tarefa"
-            button="Adicionar"
+          <FormularioCadastro
+            labelTitle="Criar Tarefa"
+            buttonAdd="Adicionar"
             submit={addTask}
           />
-          <Formulario
-            label="Filtre"
-            h4="Minhas tarefas"
+          <FormularioFiltro
+            labelFilter="Filtre"
+            titleTable="Minhas tarefas"
             submit={filterTask}
           />
           <Table head={tableData.head} body={tableData.body} />

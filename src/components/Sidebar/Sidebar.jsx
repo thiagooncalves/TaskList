@@ -1,9 +1,17 @@
 import * as S from './sidebar.style.js';
 
-export const Sidebar = ({ button1, button2, button3, button4, button5 }) => {
+export const Sidebar = () => {
+  const links = ['Ofertas e Destinos', 'Home', 'Minhas Viagens', 'Fale Conosco', 'Login'];
   return (
     <S.Sidebar>
-        <a href="//www.google.com">
+        <div>
+          <ul>
+            { links.map( (link) => <button key = { link.toString() }>{ link }</button> )}
+          </ul>
+        </div>
+        
+        
+        {/* <a href="//www.google.com">
           <button>{button1}</button>
         </a>
         <b />
@@ -21,7 +29,7 @@ export const Sidebar = ({ button1, button2, button3, button4, button5 }) => {
         <b />
         <a href="//www.google.com">
           <button>{button5}</button>
-        </a>
+        </a> */}
       </S.Sidebar>
   )
 }
